@@ -8,6 +8,7 @@ import {DevServerBuilder} from "./builders/dev-server.builder";
 import {Configuration as DevServerConfiguration} from "webpack-dev-server";
 import {IDevServerBuilderOptions} from "./builders/interfaces/dev-server-builder-options.interface";
 import {ILoaderBuilderOptions} from "./builders/interfaces/loader-builder-options.interface";
+import {IResolverBuilderOptions} from "./builders/interfaces/resolver-builder-options.interface";
 
 export class WebpackConfigurator {
     private static readonly FILE_NAME_OUTPUT_PATTERN = '[name].[contenthash].js';
@@ -37,7 +38,7 @@ export class WebpackConfigurator {
             module: {
                 rules: this.buildLoaders(buildersOptions.loadersOptions),
             },
-            resolve: this.buildResolvers(),
+            resolve: this.buildResolvers(buildersOptions.resolversOptions),
             devtool: isDev ? 'inline-source-map' : undefined,
             devServer: isDev ? this.buildDevServer(buildersOptions.devServerOptions) : undefined,
         }
@@ -46,8 +47,8 @@ export class WebpackConfigurator {
         return this.pluginsBuilder.build(options);
     }
 
-    private buildResolvers(): ResolveOptions {
-        return this.resolversBuilder.build();
+    private buildResolvers(options: IResolverBuilderOptions): ResolveOptions {
+        return this.resolversBuilder.build(options);
     }
 
     private buildLoaders(options: ILoaderBuilderOptions): RuleSetRule[] {

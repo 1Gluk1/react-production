@@ -28,6 +28,9 @@ export default (env: IBuildEnv) => {
                     isNeedLoadIndentName: isDev
                 }
             },
+            resolversOptions: {
+                srcPath: resolve(__dirname, 'src')
+            },
             devServerOptions: {
                 port: PORT,
             }
