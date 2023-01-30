@@ -1,7 +1,7 @@
-import {WebpackConfigurator} from "./config/webpack/webpack-configurator";
-import {resolve} from "path";
-import {IWebpackConfiguratorOptions} from "./config/webpack/interfaces/webpack-configurator-options.interface";
-import {IBuildEnv} from "./config/webpack/interfaces/build-env.interface";
+import { WebpackConfigurator } from "./config/webpack/webpack-configurator";
+import { resolve } from "path";
+import { IWebpackConfiguratorOptions } from "./config/webpack/interfaces/webpack-configurator-options.interface";
+import { IBuildEnv } from "./config/webpack/interfaces/build-env.interface";
 
 export default (env: IBuildEnv) => {
     const webpackConfigurator: WebpackConfigurator = new WebpackConfigurator();
