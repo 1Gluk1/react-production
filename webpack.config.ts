@@ -21,6 +21,9 @@ export default (env: IBuildEnv) => {
                 htmlPluginOptions: {
                     pathToTemplate: resolve(__dirname, 'public', 'index.html')
                 },
+                definePluginOptions: {
+                    isDev,
+                }
             },
             loadersOptions: {
                 sassOptions: {
