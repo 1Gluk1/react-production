@@ -1,8 +1,9 @@
 import { htmlPlugin } from "../plugins/html.plugin";
-import { progressPlugin} from "../plugins/progress.plugin";
+import { progressPlugin } from "../plugins/progress.plugin";
 import { IWebpackPluginBuilderOptions } from "./interfaces/plugin-builder-options.interface";
 import { miniCSSExtractPlugin } from "../plugins/mini-css-extract.plugin";
-import {definePlugin} from '../plugins/define.plugin';
+import { definePlugin } from '../plugins/define.plugin';
+import { hmrPlugin } from '../plugins/hmr.plugin';
 
 export class PluginBuilder {
     build({ htmlPluginOptions, definePluginOptions }: IWebpackPluginBuilderOptions) {
@@ -11,6 +12,7 @@ export class PluginBuilder {
             progressPlugin(),
             miniCSSExtractPlugin(),
             definePlugin(definePluginOptions),
+            hmrPlugin()
         ];
     }
 }
