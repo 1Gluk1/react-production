@@ -1,5 +1,6 @@
 {
   "current_language": "Русский",
   "test_translate": "Тестовый перевод",
-  "loading": "Загрузка..."
+  "loading": "Загрузка...",
+  "page_not_found": "Страница не найдена!"
 }
