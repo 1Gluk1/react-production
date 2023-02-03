@@ -36,7 +36,7 @@ export default {
 	],
 
 	// The glob patterns Jest uses to detect test files
-	testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
+	testMatch: ['<rootDir>../../src/**/*(*.)@(spec|test).[tj]s?(x)'],
 
 	// All imported modules in your tests should be mocked automatically
 	// automock: false,
