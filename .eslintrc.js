@@ -5,6 +5,7 @@ module.exports = {
 	},
 	extends: [
 		'plugin:react/recommended',
+		'plugin:react/jsx-runtime',
 		'xo',
 	],
 	overrides: [
@@ -12,6 +13,10 @@ module.exports = {
 			extends: [
 				'xo-typescript',
 			],
+			rules: {
+				'@typescript-eslint/prefer-nullish-coalescing': [0],
+				'@typescript-eslint/naming-convention': [0],
+			},
 			files: [
 				'*.ts',
 				'*.tsx',
@@ -21,10 +26,14 @@ module.exports = {
 	parserOptions: {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
+		project: ['./tsconfig.json'],
 	},
 	plugins: [
 		'react',
 	],
 	rules: {
+	},
+	globals: {
+		__IS_DEV__: true,
 	},
 };
