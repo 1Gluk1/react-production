@@ -1,5 +1,5 @@
-import {ISASSLoaderOptions} from "../../loaders/interfaces/sass-loader-options.interface";
+import {type ISASSLoaderOptions} from '../../loaders/interfaces/sass-loader-options.interface';
 
-export interface ILoaderBuilderOptions {
-    sassOptions: ISASSLoaderOptions,
-}
+export type ILoaderBuilderOptions = {
+	sassOptions: ISASSLoaderOptions;
+};

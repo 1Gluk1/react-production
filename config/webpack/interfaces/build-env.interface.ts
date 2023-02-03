@@ -1,6 +1,6 @@
-import {Configuration} from "webpack";
+import {type Configuration} from 'webpack';
 
-export interface IBuildEnv {
-    mode: Configuration['mode'];
-    port: number;
-}
+export type IBuildEnv = {
+	mode: Configuration['mode'];
+	port: number;
+};

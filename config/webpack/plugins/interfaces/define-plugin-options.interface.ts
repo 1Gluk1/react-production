@@ -1,3 +1,3 @@
-export interface IDefinePluginOptions {
-    isDev: boolean;
-}
+export type IDefinePluginOptions = {
+	isDev: boolean;
+};

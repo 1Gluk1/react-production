@@ -1,8 +1,8 @@
-import { RuleSetRule } from "webpack";
+import {type RuleSetRule} from 'webpack';
 
 export function fileLoader(): RuleSetRule {
-    return {
-        test: /\.(png|jpe?g|gif|woff2|woff)$/i,
-        use: [{loader: 'file-loader'}],
-    }
+	return {
+		test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+		use: [{loader: 'file-loader'}],
+	};
 }

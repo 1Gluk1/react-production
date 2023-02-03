@@ -1,3 +1,3 @@
-export interface IResolverBuilderOptions {
-    srcPath: string
-}
+export type IResolverBuilderOptions = {
+	srcPath: string;
+};

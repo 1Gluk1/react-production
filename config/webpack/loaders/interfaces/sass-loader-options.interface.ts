@@ -1,4 +1,4 @@
-export interface ISASSLoaderOptions {
-    isNeedExtractCSS: boolean;
-    isNeedLoadIndentName: boolean;
-}
+export type ISASSLoaderOptions = {
+	isNeedExtractCss: boolean;
+	isNeedLoadIndentName: boolean;
+};

@@ -1,3 +1,3 @@
-export interface IHTMLWebpackPluginOptions {
-    pathToTemplate: string;
-}
+export type IHTMLWebpackPluginOptions = {
+	pathToTemplate: string;
+};

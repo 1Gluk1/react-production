@@ -1,3 +1,3 @@
-export interface IDevServerBuilderOptions {
-    port: number;
-}
+export type IDevServerBuilderOptions = {
+	port: number;
+};

@@ -1,1 +1,1 @@
-export const JAVASCRIPT_EXTENSION = '.js'
+export const JAVASCRIPT_EXTENSION = '.js';

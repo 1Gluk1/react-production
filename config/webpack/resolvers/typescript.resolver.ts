@@ -1,1 +1,1 @@
-export const TYPESCRIPT_EXTENSIONS = ['.tsx', '.ts']
+export const TYPESCRIPT_EXTENSIONS = ['.tsx', '.ts'];

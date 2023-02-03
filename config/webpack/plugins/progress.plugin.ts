@@ -1,5 +1,5 @@
-import { ProgressPlugin, WebpackPluginInstance } from "webpack";
+import {ProgressPlugin, type WebpackPluginInstance} from 'webpack';
 
 export function progressPlugin(): WebpackPluginInstance {
-    return new ProgressPlugin();
+	return new ProgressPlugin();
 }
