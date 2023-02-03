@@ -7,6 +7,7 @@ module.exports = {
 		'plugin:react/recommended',
 		'plugin:react/jsx-runtime',
 		'xo',
+		'plugin:i18next/recommended',
 	],
 	overrides: [
 		{
@@ -30,8 +31,10 @@ module.exports = {
 	},
 	plugins: [
 		'react',
+		'i18next',
 	],
 	rules: {
+		'i18next/no-literal-string': ['warn', {markupOnly: true}],
 	},
 	globals: {
 		__IS_DEV__: true,
