@@ -1,3 +1,3 @@
-export type IDefinePluginOptions = {
+export type DefinePluginOptions = {
 	isDev: boolean;
 };

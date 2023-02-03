@@ -1,6 +1,6 @@
 import {type Configuration} from 'webpack';
 
-export type IBuildEnv = {
+export type BuildEnv = {
 	mode: Configuration['mode'];
 	port: number;
 };

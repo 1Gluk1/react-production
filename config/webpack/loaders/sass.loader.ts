@@ -1,8 +1,8 @@
 import {type RuleSetRule} from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import {type ISASSLoaderOptions} from './interfaces/sass-loader-options.interface';
+import {type SASSLoaderOptions} from './types/sass-loader-options.interface';
 
-export function sassLoader({isNeedExtractCss, isNeedLoadIndentName}: ISASSLoaderOptions): RuleSetRule {
+export function sassLoader({isNeedExtractCss, isNeedLoadIndentName}: SASSLoaderOptions): RuleSetRule {
 	return {
 		test: /\.s[ac]ss$/i,
 		use: [

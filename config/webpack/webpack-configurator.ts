@@ -2,13 +2,13 @@ import {PluginBuilder} from './builders/plugin.builder';
 import {LoaderBuilder} from './builders/loader.builder';
 import {type Configuration, type ResolveOptions, type RuleSetRule, type WebpackPluginInstance} from 'webpack';
 import {ResolverBuilder} from './builders/resolver.builder';
-import {type IWebpackConfiguratorOptions} from './interfaces/webpack-configurator-options.interface';
-import {type IWebpackPluginBuilderOptions} from './builders/interfaces/plugin-builder-options.interface';
+import {type WebpackConfiguratorOptions} from './types/webpack-configurator-options.type';
+import {type WebpackPluginBuilderOptions} from './builders/types/plugin-builder-options.type';
 import {DevServerBuilder} from './builders/dev-server.builder';
 import {type Configuration as DevServerConfiguration} from 'webpack-dev-server';
-import {type IDevServerBuilderOptions} from './builders/interfaces/dev-server-builder-options.interface';
-import {type ILoaderBuilderOptions} from './builders/interfaces/loader-builder-options.interface';
-import {type IResolverBuilderOptions} from './builders/interfaces/resolver-builder-options.interface';
+import {type DevServerBuilderOptions} from './builders/types/dev-server-builder-options.type';
+import {type LoaderBuilderOptions} from './builders/types/loader-builder-options.type';
+import {type ResolverBuilderOptions} from './builders/types/resolver-builder-options.type';
 
 export class WebpackConfigurator {
 	private static get FILE_NAME_OUTPUT_PATTERN() {
@@ -27,7 +27,7 @@ export class WebpackConfigurator {
 		this.devServerBuilder = new DevServerBuilder();
 	}
 
-	buildConfig({mode, isDev, entryPointPath, buildPath, buildersOptions}: IWebpackConfiguratorOptions): Configuration {
+	buildConfig({mode, isDev, entryPointPath, buildPath, buildersOptions}: WebpackConfiguratorOptions): Configuration {
 		return {
 			mode,
 			entry: entryPointPath,
@@ -46,19 +46,19 @@ export class WebpackConfigurator {
 		};
 	}
 
-	private buildPlugins(options: IWebpackPluginBuilderOptions): WebpackPluginInstance[] {
+	private buildPlugins(options: WebpackPluginBuilderOptions): WebpackPluginInstance[] {
 		return this.pluginsBuilder.build(options);
 	}
 
-	private buildResolvers(options: IResolverBuilderOptions): ResolveOptions {
+	private buildResolvers(options: ResolverBuilderOptions): ResolveOptions {
 		return this.resolversBuilder.build(options);
 	}
 
-	private buildLoaders(options: ILoaderBuilderOptions): RuleSetRule[] {
+	private buildLoaders(options: LoaderBuilderOptions): RuleSetRule[] {
 		return this.loadersBuilder.build(options);
 	}
 
-	private buildDevServer(options: IDevServerBuilderOptions): DevServerConfiguration {
+	private buildDevServer(options: DevServerBuilderOptions): DevServerConfiguration {
 		return this.devServerBuilder.build(options);
 	}
 }

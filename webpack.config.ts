@@ -1,9 +1,9 @@
 import {WebpackConfigurator} from './config/webpack/webpack-configurator';
 import {resolve} from 'path';
-import {type IWebpackConfiguratorOptions} from './config/webpack/interfaces/webpack-configurator-options.interface';
-import {type IBuildEnv} from './config/webpack/interfaces/build-env.interface';
+import {type WebpackConfiguratorOptions} from './config/webpack/types/webpack-configurator-options.type';
+import {type BuildEnv} from './config/webpack/types/build-env.type';
 
-export default (env: IBuildEnv) => {
+export default (env: BuildEnv) => {
 	const webpackConfigurator: WebpackConfigurator = new WebpackConfigurator();
 
 	const mode = env.mode ?? 'development';
@@ -11,7 +11,7 @@ export default (env: IBuildEnv) => {
 
 	const isDev = mode === 'development';
 
-	const buildOptions: IWebpackConfiguratorOptions = {
+	const buildOptions: WebpackConfiguratorOptions = {
 		mode,
 		isDev,
 		entryPointPath: resolve(__dirname, 'src', 'index.tsx'),

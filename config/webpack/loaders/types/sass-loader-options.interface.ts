@@ -1,4 +1,4 @@
-export type ISASSLoaderOptions = {
+export type SASSLoaderOptions = {
 	isNeedExtractCss: boolean;
 	isNeedLoadIndentName: boolean;
 };
