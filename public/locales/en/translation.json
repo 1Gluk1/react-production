@@ -2,5 +2,7 @@
   "current_language": "English",
   "test_translate": "Translation example",
   "loading": "Loading...",
-  "page_not_found": "Page not found!"
+  "page_not_found": "Page not found!",
+  "unexpected_error": "Upsss, something go wrong! Please try later :(",
+  "reload_page": "Reload page"
 }
