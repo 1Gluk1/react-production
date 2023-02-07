@@ -1,4 +1,4 @@
-import { resolve } from "path";
+import {resolve} from 'path';
 
 export default {
 	clearMocks: true,
@@ -25,6 +25,6 @@ export default {
 	testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).[tj]s?(x)'],
 	moduleNameMapper: {
 		'\\.s?css$': 'identity-obj-proxy',
-		'\\.svg': resolve(__dirname, 'jestEmptyComponent.tsx')
+		'\\.svg': resolve(__dirname, 'jestEmptyComponent.tsx'),
 	},
 };
