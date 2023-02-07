@@ -4,6 +4,7 @@ import {type WebpackPluginBuilderOptions} from './types/plugin-builder-options.t
 import {miniCSSExtractPlugin} from '../plugins/mini-css-extract.plugin';
 import {definePlugin} from '../plugins/define.plugin';
 import {hmrPlugin} from '../plugins/hmr.plugin';
+import {bundleAnalyzerPlugin} from '../plugins/bundle-analyzer.plugin';
 
 export class PluginBuilder {
 	build({htmlPluginOptions, definePluginOptions}: WebpackPluginBuilderOptions) {
@@ -13,6 +14,7 @@ export class PluginBuilder {
 			miniCSSExtractPlugin(),
 			definePlugin(definePluginOptions),
 			hmrPlugin(),
+			bundleAnalyzerPlugin(),
 		];
 	}
 }
