@@ -8,13 +8,18 @@ import {bundleAnalyzerPlugin} from '../plugins/bundle-analyzer.plugin';
 
 export class PluginBuilder {
 	build({htmlPluginOptions, definePluginOptions}: WebpackPluginBuilderOptions) {
-		return [
+		const basePlugins = [
 			htmlPlugin(htmlPluginOptions),
 			progressPlugin(),
 			miniCSSExtractPlugin(),
 			definePlugin(definePluginOptions),
 			hmrPlugin(),
-			bundleAnalyzerPlugin(),
 		];
+
+		if(definePluginOptions.isDev) {
+			basePlugins.push(bundleAnalyzerPlugin())
+		}
+
+		return basePlugins
 	}
 }
