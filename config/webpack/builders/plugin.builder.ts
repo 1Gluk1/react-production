@@ -13,11 +13,13 @@ export class PluginBuilder {
 			progressPlugin(),
 			miniCSSExtractPlugin(),
 			definePlugin(definePluginOptions),
-			hmrPlugin(),
 		];
 
 		if(definePluginOptions.isDev) {
-			basePlugins.push(bundleAnalyzerPlugin())
+			basePlugins.push(
+				hmrPlugin(),
+				bundleAnalyzerPlugin(),
+			)
 		}
 
 		return basePlugins
