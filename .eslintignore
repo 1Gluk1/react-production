@@ -1,2 +1,3 @@
 /config
 webpack.config.ts
+scripts/generate-loki-client.js

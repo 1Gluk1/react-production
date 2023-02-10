@@ -1,5 +1,6 @@
 {
-  "current_language": "English",
+  "current_language_full": "English",
+  "current_language_short": "EN",
   "test_translate": "Translation example",
   "loading": "Loading...",
   "page_not_found": "Page not found!",
