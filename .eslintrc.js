@@ -20,11 +20,13 @@ module.exports = {
 		sourceType: 'module',
 		project: ['./tsconfig.json'],
 	},
-	plugins: ['react', 'i18next'],
+	plugins: ['react', 'i18next', 'react-hooks'],
 	rules: {
 		'i18next/no-literal-string': ['warn', {
 			markupOnly: true,
 		}],
+		'react-hooks/rules-of-hooks': 'error',
+		'react-hooks/exhaustive-deps': 'error',
 	},
 	globals: {
 		__IS_DEV__: true,

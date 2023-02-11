@@ -6,5 +6,7 @@
   "page_not_found": "Page not found!",
   "unexpected_error": "Upsss, something go wrong! Please try later :(",
   "reload_page": "Reload page",
-  "throw_error": "Throw error"
+  "throw_error": "Throw error",
+  "sign_in": "Sign in",
+  "sign_up": "Sign up"
 }
